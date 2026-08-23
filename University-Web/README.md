@@ -1,29 +1,47 @@
-# Web Technology Lab
+# University Website Navigation System
 
-This repository contains Web Technology laboratory assignments developed using HTML, CSS, JavaScript, and React.js.
+A React.js-based university website navigation system developed as part of the Web Technology laboratory.
 
-## Assignments
+The website provides a structured navigation system with dropdown menus and multiple pages for different university sections.
 
-### React.js University Website Navigation
+## Features
 
-A React.js-based university website navigation system containing menus such as About Us, Academics, Admissions, Research, Campus Life, Placements, and Contact Us.
+- University website navigation bar
+- About Us section
+- Academics dropdown menu
+- Admissions dropdown menu
+- Research section
+- Campus Life dropdown menu
+- Placements dropdown menu
+- Contact Us section
+- React Router-based navigation
+- Reusable React components
+- Dropdown state management using React `useState`
+- Responsive design
 
-The website includes dropdown menus and navigation between different pages using React Router.
-
-**Technologies Used:**
-- React.js
-- JSX
-- JavaScript
-- CSS3
-- React Router
-- Vite
-
-## Project Structure
+## Navigation Structure
 
 ```text
-Web Technology Lab/
+University Portal
 │
-└── university-web/
-    ├── src
-    ├── index.html
-    └── README.md
+├── About Us
+│
+├── Academics
+│   ├── Programs
+│   └── Departments
+│
+├── Admissions
+│   ├── Apply Now
+│   └── Eligibility
+│
+├── Research
+│
+├── Campus Life
+│   ├── Hostels
+│   └── Clubs & Activities
+│
+├── Placements
+│   ├── Placement Overview
+│   └── Recruiters
+│
+└── Contact Us
