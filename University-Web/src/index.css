@@ -1,0 +1,297 @@
+/* =========================================
+   GLOBAL STYLES
+   ========================================= */
+
+/* Remove default browser spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styling for the entire webpage */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #222;
+  min-height: 100vh;
+}
+
+
+/* =========================================
+   NAVIGATION BAR
+   ========================================= */
+
+.navbar {
+  width: 100%;
+  min-height: 70px;
+
+  /* Arrange logo and menu horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 15px 50px;
+
+  background: #12355b;
+  color: white;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+
+  /* Keeps the navbar visible while scrolling */
+  position: sticky;
+  top: 0;
+
+  z-index: 1000;
+}
+
+
+/* University logo / title */
+.logo {
+  font-size: 24px;
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   MAIN NAVIGATION MENU
+   ========================================= */
+
+.nav-menu {
+  display: flex;
+
+  /* Remove bullet points */
+  list-style: none;
+
+  gap: 10px;
+
+  align-items: center;
+}
+
+
+/* Individual menu item */
+.menu-item {
+  position: relative;
+}
+
+
+/* Normal navigation links */
+.menu-item > a {
+  display: block;
+
+  padding: 10px 15px;
+
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 6px;
+
+  transition: 0.3s;
+}
+
+
+/* Navigation link hover effect */
+.menu-item > a:hover {
+  background: #1d5d91;
+}
+
+
+/* =========================================
+   DROPDOWN BUTTON
+   ========================================= */
+
+.menu-button {
+  border: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 15px;
+
+  padding: 10px 15px;
+
+  cursor: pointer;
+
+  border-radius: 6px;
+
+  transition: 0.3s;
+}
+
+
+/* Dropdown button hover effect */
+.menu-button:hover {
+  background: #1d5d91;
+}
+
+
+/* Space between menu name and arrow */
+.menu-button span {
+  margin-left: 7px;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   DROPDOWN MENU
+   ========================================= */
+
+.dropdown {
+  position: absolute;
+
+  top: 100%;
+  left: 0;
+
+  min-width: 190px;
+
+  background: white;
+
+  list-style: none;
+
+  border-radius: 6px;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  overflow: hidden;
+}
+
+
+/* Dropdown links */
+.dropdown a {
+  display: block;
+
+  padding: 12px 15px;
+
+  color: #222;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+
+/* Dropdown hover effect */
+.dropdown a:hover {
+  background: #e8f1f8;
+
+  color: #12355b;
+}
+
+
+/* =========================================
+   PAGE CONTENT
+   ========================================= */
+
+.page {
+  max-width: 1000px;
+
+  margin: 50px auto;
+
+  padding: 40px;
+
+  background: white;
+
+  border-radius: 12px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Page heading */
+.page h1 {
+  color: #12355b;
+
+  margin-bottom: 20px;
+
+  font-size: 32px;
+}
+
+
+/* Page paragraph */
+.page p {
+  font-size: 17px;
+
+  line-height: 1.7;
+
+  margin-bottom: 15px;
+
+  color: #444;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+/* Apply these styles on smaller screens */
+@media (max-width: 900px) {
+
+  /* Stack logo and navigation vertically */
+  .navbar {
+    flex-direction: column;
+
+    gap: 15px;
+
+    padding: 20px;
+  }
+
+
+  /* Allow menu items to wrap */
+  .nav-menu {
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+}
+
+
+/* Mobile screen styling */
+@media (max-width: 600px) {
+
+  /* Arrange menu items vertically */
+  .nav-menu {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+
+  .menu-item {
+    width: 100%;
+
+    text-align: center;
+  }
+
+
+  .menu-item > a,
+  .menu-button {
+    width: 100%;
+  }
+
+
+  /* Dropdown becomes part of the normal layout */
+  .dropdown {
+    position: static;
+
+    width: 100%;
+  }
+
+
+  /* Reduce page spacing on mobile */
+  .page {
+    width: 90%;
+
+    margin: 30px auto;
+
+    padding: 25px;
+  }
+
+
+  .page h1 {
+    font-size: 26px;
+  }
+
+}
