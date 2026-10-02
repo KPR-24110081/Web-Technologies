@@ -4,11 +4,12 @@ This repository contains a collection of web technology laboratory assignments a
 
 ## Repository Overview
 
-The project structure includes three main folders, each representing a separate assignment or lab:
+The project includes the following major labs and mini-projects:
 
 - `University-Web` — a React-based university website with multiple pages and navigation.
 - `MERN_APPLICTION` — a MERN stack application demonstrating file system and URL operations.
 - `FTP-URL` — a frontend project focused on understanding and parsing FTP URLs.
+- `nodejs` — a Node.js server project that serves static pages and demonstrates basic HTTP server handling.
 
 ## Project Structure
 
@@ -48,6 +49,21 @@ Web-Technologies/
 │           ├── App.jsx
 │           ├── main.jsx
 │           └── ...
+├── nodejs/
+│   ├── README.md
+│   ├── server.js
+│   ├── package.json
+│   ├── index.html
+│   ├── public/
+│   │   ├── index.html
+│   │   ├── about.html
+│   │   ├── 404.html
+│   │   └── ...
+│   └── src/
+│       ├── App.jsx
+│       ├── App.css
+│       ├── main.jsx
+│       └── assets/
 └── University-Web/
     ├── README.md
     ├── University_Website.pdf
@@ -72,7 +88,18 @@ Technologies used:
 - CSS
 - JavaScript
 
-### 2) MERN Application
+### 2) Node.js Server Project
+
+A simple Node.js application that serves static pages from a `public` directory, handles HTTP requests, logs activity, and returns a custom 404 page for unknown routes.
+
+Technologies used:
+- Node.js
+- HTTP module
+- HTML
+- CSS
+- JavaScript
+
+### 3) MERN Application
 
 A full-stack MERN project that explores Node.js file-system operations and URL handling using Express and MongoDB. It includes a dashboard, history tracking, and a React-based UI.
 
@@ -84,7 +111,7 @@ Technologies used:
 - Mongoose
 - Vite
 
-### 3) University Website
+### 4) University Website
 
 A React-based university website navigation app featuring pages like About Us, Academics, Admissions, Research, Placements, Campus Life, and Contact Us.
 
@@ -111,6 +138,6 @@ Technologies used:
 
 ## Notes
 
-This repo is organized by assignment and demonstrates a range of front-end and full-stack web development concepts covered during the Web Technologies lab.
+This repository is organized by assignment and demonstrates a range of front-end, back-end, and full-stack web development concepts covered during the Web Technologies lab.
 
-Each folder contains its own README and is intended to be run independently based on the project requirements.
+Each folder contains its own README and can be run independently based on the project requirements.
