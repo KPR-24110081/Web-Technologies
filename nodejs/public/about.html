@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — NovaTech</title>
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --accent: #00d2d3;
+            --dark: #1a1a2e;
+            --light: #f5f6fa;
+            --text: #2f3640;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: var(--light);
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 4rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .brand { font-size: 1.4rem; font-weight: 700; letter-spacing: 1px; }
+        .brand span { color: var(--accent); }
+
+        .links a {
+            color: var(--light);
+            text-decoration: none;
+            margin-left: 2rem;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .links a:hover,
+        .links a.active {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem 3rem;
+        }
+
+        .badge {
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: rgba(0, 210, 211, 0.15);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .lead {
+            font-size: 1.15rem;
+            color: #bbbbbb;
+            margin-bottom: 2.5rem;
+        }
+
+        .story {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .story h2 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .story p { color: #ddd; }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 1.8rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat .number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .stat .label {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-top: 0.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .tech-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .tech {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem;
+            background: rgba(108, 92, 231, 0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(108, 92, 231, 0.3);
+        }
+
+        .tech .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .tech span { color: #eee; font-size: 0.95rem; }
+
+        .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            transition: opacity 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover { opacity: 0.9; transform: scale(1.05); }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #888;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 700px) {
+            nav { padding: 1rem 1.5rem; }
+            .stats { grid-template-columns: 1fr; }
+            .tech-list { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="brand">Nova<span>Tech</span></div>
+        <div class="links">
+            <a href="/">Home</a>
+            <a href="/about.html" class="active">About</a>
+        </div>
+    </nav>
+
+    <main>
+        <span class="badge">✦ Our Story</span>
+        <h1>About NovaTech</h1>
+        <p class="lead">
+            We craft fast, elegant web experiences backed by solid engineering.
+            This very site is served by a custom Node.js HTTP server we built by hand.
+        </p>
+
+        <section class="story">
+            <h2>Why We Built This Server</h2>
+            <p>
+                Most modern web apps lean on heavy frameworks and thousands of dependencies.
+                NovaTech takes a different path — we built this server from scratch using only
+                Node.js built-in modules (<code>http</code>, <code>fs</code>, <code>path</code>).
+                The result is a lean, transparent, and lightning-fast foundation for the web.
+                Each request is handled asynchronously, routed cleanly, and logged via our
+                own middleware so every visit is observable and trustworthy.
+            </p>
+        </section>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="number">0</div>
+                <div class="label">Frameworks</div>
+            </div>
+            <div class="stat">
+                <div class="number">3</div>
+                <div class="label">Core Modules</div>
+            </div>
+            <div class="stat">
+                <div class="number">100%</div>
+                <div class="label">Hand-Built</div>
+            </div>
+        </div>
+
+        <section class="story">
+            <h2>Tech Stack</h2>
+            <div class="tech-list">
+                <div class="tech"><span class="dot"></span><span>Node.js HTTP Module</span></div>
+                <div class="tech"><span class="dot"></span><span>File System (fs)</span></div>
+                <div class="tech"><span class="dot"></span><span>Path Resolution</span></div>
+                <div class="tech"><span class="dot"></span><span>Custom Middleware</span></div>
+                <div class="tech"><span class="dot"></span><span>MIME-Type Detection</span></div>
+                <div class="tech"><span class="dot"></span><span>404 Error Handling</span></div>
+            </div>
+        </section>
+
+        <a href="/" class="btn">← Back to Home</a>
+    </main>
+
+    <footer>© 2026 NovaTech &middot; Served from http://localhost:3000</footer>
+</body>
+</html>

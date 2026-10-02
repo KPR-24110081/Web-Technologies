@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaTech — Homepage</title>
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --accent: #00d2d3;
+            --dark: #1a1a2e;
+            --light: #f5f6fa;
+            --text: #2f3640;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: var(--light);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 4rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .brand {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .brand span { color: var(--accent); }
+
+        .links a {
+            color: var(--light);
+            text-decoration: none;
+            margin-left: 2rem;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .links a:hover,
+        .links a.active {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 5rem 2rem;
+        }
+
+        .badge {
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: rgba(0, 210, 211, 0.15);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #bbbbbb;
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(200px, 1fr));
+            gap: 1.5rem;
+            max-width: 900px;
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.8rem 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(108, 92, 231, 0.3);
+        }
+
+        .card .icon {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #cccccc;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 2.5rem;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            transition: opacity 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover { opacity: 0.9; transform: scale(1.05); }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #888;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 700px) {
+            nav { padding: 1rem 1.5rem; }
+            .features { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="brand">Nova<span>Tech</span></div>
+        <div class="links">
+            <a href="/" class="active">Home</a>
+            <a href="/about.html">About</a>
+        </div>
+    </nav>
+
+    <main>
+        <span class="badge">✦ Node.js Powered</span>
+        <h1>Build the Future, Today</h1>
+        <p class="subtitle">
+            A modern web experience served by a hand-built Node.js HTTP server —
+            no frameworks, no magic. Just pure, fast, reliable code.
+        </p>
+
+        <div class="features">
+            <div class="card">
+                <div class="icon">⚡</div>
+                <h3>Lightning Fast</h3>
+                <p>Asynchronous file serving keeps requests quick and responsive.</p>
+            </div>
+            <div class="card">
+                <div class="icon">🛡️</div>
+                <h3>Robust Routing</h3>
+                <p>Clean route handling with proper 404 responses for unknown paths.</p>
+            </div>
+            <div class="card">
+                <div class="icon">📊</div>
+                <h3>Request Logging</h3>
+                <p>Every incoming request is logged to the console via middleware.</p>
+            </div>
+        </div>
+
+        <a href="/about.html" class="btn">Learn More About Us →</a>
+    </main>
+
+    <footer>© 2026 NovaTech &middot; Served from http://localhost:3000</footer>
+</body>
+</html>
