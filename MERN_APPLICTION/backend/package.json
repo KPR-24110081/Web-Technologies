@@ -1,0 +1,19 @@
+{
+  "name": "nodescope-backend",
+  "version": "1.0.0",
+  "description": "NodeScope backend - Express REST API + MongoDB (Mongoose) demonstrating Node.js fs and url modules",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.11.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5"
+  }
+}

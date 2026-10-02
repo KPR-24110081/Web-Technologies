@@ -1,0 +1,15 @@
+{
+  "appName": "File System & URL Explorer",
+  "version": "1.0.0",
+  "modules": ["fs", "url"],
+  "storageDir": "backend/storage",
+  "features": {
+    "fileOperations": true,
+    "urlExplorer": true,
+    "historyTracking": true
+  },
+  "theme": {
+    "background": "#0B1020",
+    "accent": "#6366F1"
+  }
+}

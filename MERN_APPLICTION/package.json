@@ -1,0 +1,21 @@
+{
+  "name": "nodescope",
+  "version": "1.0.0",
+  "description": "NodeScope - A MERN-Based File System and URL Operations Explorer (MongoDB, Express, React, Node.js)",
+  "private": true,
+  "scripts": {
+    "server": "npm run dev --prefix backend",
+    "client": "npm run dev --prefix frontend",
+    "dev": "concurrently -n server,client -c yellow,cyan \"npm:server\" \"npm:client\"",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "start": "npm run dev"
+  },
+  "engines": {
+    "node": ">=18.11.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

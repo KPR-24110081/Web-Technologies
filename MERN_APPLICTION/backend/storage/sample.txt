@@ -1,0 +1,13 @@
+Welcome to NodeLab!
+
+This is a sample text file created to demonstrate the Node.js fs module.
+
+You can:
+1. Read this file using fs.readFile()
+2. Overwrite it using fs.writeFile()
+3. Append to it using fs.appendFile()
+4. Rename it using fs.rename()
+5. Get its metadata using fs.stat()
+6. Delete it using fs.unlink()
+
+Every operation here is executed by a real Node.js backend.

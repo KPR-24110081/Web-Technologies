@@ -1,0 +1,2 @@
+NodeScope is a MERN app.
+fs + url modules + MongoDB.

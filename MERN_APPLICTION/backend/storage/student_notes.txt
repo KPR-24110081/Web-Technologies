@@ -1,0 +1,4 @@
+My name is KPR.
+I am a B.Tech AI & Data Science student.
+I am learning Web Technologies this semester.
+This file demonstrates real file I/O using the Node.js fs module.
