@@ -1,0 +1,12 @@
+{
+  "name": "nodejs_server",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A simple Node.js HTTP server with Homepage, About, and 404 pages.",
+  "scripts": {
+    "start": "node server.js",
+    "lint": "eslint ."
+  },
+  "devDependencies": {}
+}
