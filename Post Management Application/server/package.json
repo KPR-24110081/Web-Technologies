@@ -1,0 +1,22 @@
+{
+  "name": "pma-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "REST API for the Post Management Application (Express + MongoDB native driver)",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node index.mjs",
+    "dev": "node --watch index.mjs",
+    "seed": "node scripts/seed.mjs",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "engines": {
+    "node": ">=20.12"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongodb": "^6.20.0"
+  }
+}
